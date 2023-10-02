@@ -27,6 +27,9 @@ public class Student {
     public boolean isPassing() {
         return (averageTestScore() >= 65);
     }
+    public boolean expectationsMet() {
+        return (averageTestScore() >= 85);
+    }
     public double averageTestScore() {
         return accumulatedTestScores/testScoreCount;
     }
