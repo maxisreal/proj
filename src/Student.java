@@ -27,11 +27,19 @@ public class Student {
     public boolean isPassing() {
         return (averageTestScore() >= 65);
     }
-    public boolean expectationsMet() {
-        return (averageTestScore() >= 85);
+    public void extraCredit(double grade) {
+        if (grade > 100) {
+            accumulatedTestScores += 100;
+        } else {
+            accumulatedTestScores += grade;
+        }
     }
     public double averageTestScore() {
         return accumulatedTestScores/testScoreCount;
+    }
+    public void avgManyTests(double avg, int tests) {
+        testScoreCount += tests;
+        accumulatedTestScores += tests*avg;
     }
     public void printStudentInfo() {
         System.out.println("Student Full Name: " + getFirstName()+ " " +getLastName());

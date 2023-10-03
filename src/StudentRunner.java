@@ -15,6 +15,8 @@ public class StudentRunner {
 
         Student student2 = new Student("Amy", "Adams", 2022);
         student2.addTestScore(68.2);
+        student2.extraCredit(95);
+        student2.avgManyTests(89, 12);
         student2.printStudentInfo();
         System.out.println();
 
